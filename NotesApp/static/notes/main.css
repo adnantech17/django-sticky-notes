@@ -1,0 +1,64 @@
+.content-block {
+    margin-top: 3em;
+}
+
+body {
+    background-color: #C3A9FF;
+    font-family: 'Akaya Telivigala',
+        cursive;
+    font-size: 1.5rem;
+}
+
+.all-notes {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: 5%;
+}
+
+.noteTitle {
+    width: 250px;
+    height: 250px;
+    font-size: 26px;
+    padding: 25px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75)
+}
+
+.notes-form {
+    position: absolute;
+    width: 50%;
+    top: 25vh;
+    left: 25%;
+
+}
+
+textarea {
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.9);
+    outline: none;
+    border: none;
+    height: 50vh;
+    width: 100%;
+    padding: 1em;
+    background-color: #a9c4ff;
+}
+
+svg {
+    color: #444444;
+    size: 2rem;
+    height: 2rem;
+}
+
+#add-btn {
+    position: absolute;
+    right: 10%;
+    top: 4%;
+}
+
+#close-btn {
+    position: absolute;
+    right: 6%;
+    top: 4%;
+}
