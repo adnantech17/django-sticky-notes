@@ -33,7 +33,7 @@ function showEditor() {
 }
 
 function createNote() {
-  var noteText = document.getElementById("note-text").value;
+  var noteText = document.getElementById("id_notetext").value;
   var newDiv = document.createElement("div");
   var newTitle = document.createElement("h1");
   var randInt = getRandomInt(8);

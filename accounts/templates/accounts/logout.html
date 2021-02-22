@@ -1,0 +1,7 @@
+{% extends "NotesApp/base.html" %}
+{% block content %}
+<h3>You have been logged out!</h3>
+<div class="border-top pt-3">
+    <small class="text-muted">Login Again? <a href="{% url 'login' %}">Click Here</a></small>
+</div>
+{% endblock content %}
