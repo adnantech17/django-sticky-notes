@@ -1,0 +1,131 @@
+.content-block {
+    margin-top: 3em;
+}
+
+body {
+    background-color: rgb(121, 98, 69);
+    font-family: 'Akaya Telivigala',
+        cursive;
+    font-size: 1.5rem;
+}
+
+.all-notes {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: 5%;
+}
+
+.noteTitle {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    font-size: 26px;
+    padding: 25px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    transition: all ease-in-out .2s;
+    div {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    &:hover {
+        transform: scale(1.1) !important;
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        z-index: 3;
+
+        svg {
+            color: rgba(220, 0, 0, 1);
+        }
+
+        div{
+            display: block;
+        }
+    }
+
+}
+
+.notes-form {
+    padding: 1em;
+    background-color: #a9c4ff;
+    position: absolute;
+    width: 50%;
+    top: 25vh;
+    left: 25%;
+    display: none;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.9);
+}
+
+textarea {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 30vh;
+    border-radius: .3rem;
+    padding: 10px 16px;
+}
+
+svg {
+    color: #444444;
+    size: 2rem;
+    height: 2rem;
+}
+
+#add-btn {
+    position: absolute;
+    right: 6%;
+    bottom: 10%;
+}
+
+#close-btn {
+    position: absolute;
+    right: 6%;
+    top: 4%;
+}
+
+
+
+//----------------------------------
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: .3rem;
+}
+
+
+.form{
+    width: 50%;
+    background-color:rgb(137, 164, 255);
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    padding: 2em;
+
+}
+
+.form-center{
+    text-align: center;
+}
+
+.btn-form{
+    width: 90%;
+}
+
+.form-container{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}

@@ -3,16 +3,19 @@
 <div class="content-section">
     <form method="POST">
         {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Join Today</legend>
-            {{ form.as_p }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Sign Up</button>
+        <div class="form-container">
+            <div class="form-group form">
+                <div class="form-center">
+                    <legend class="border-bottom mb-4">Create an Account</legend>
+                    {{form.username}}<br>
+                    {{form.password1}}<br>
+                    {{form.password2}}<br>
+                    <button class="btn btn-dark btn-form" type="submit">Register</button><br>
+                    <small class="text-muted">Already have an Account? <a href="{% url 'login' %}">Click
+                            Here</a></small>
+                </div>
+            </div>
         </div>
     </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">Already have an Account? <a href="{% url 'login' %}">Click Here</a></small>
-    </div>
 </div>
 {% endblock content %}

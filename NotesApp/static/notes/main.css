@@ -1,64 +1,141 @@
 .content-block {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 body {
-    background-color: #C3A9FF;
-    font-family: 'Akaya Telivigala',
-        cursive;
-    font-size: 1.5rem;
+  background-color: #796245;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 1.5rem;
 }
 
 .all-notes {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 2em;
-    margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 2em;
+  margin-left: 5%;
 }
 
 .noteTitle {
-    width: 250px;
-    height: 250px;
-    font-size: 26px;
-    padding: 25px;
-    margin-top: 10px;
-    overflow-wrap: break-word;
-    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75)
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  font-size: 26px;
+  padding: 25px;
+  margin-top: 10px;
+  overflow-wrap: break-word;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+}
+
+.noteTitle div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.noteTitle:hover {
+  -webkit-transform: scale(1.1) !important;
+          transform: scale(1.1) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 3;
+}
+
+.noteTitle:hover svg {
+  color: #dc0000;
+}
+
+.noteTitle:hover div {
+  display: block;
 }
 
 .notes-form {
-    position: absolute;
-    width: 50%;
-    top: 25vh;
-    left: 25%;
-
+  padding: 1em;
+  background-color: #a9c4ff;
+  position: absolute;
+  width: 50%;
+  top: 25vh;
+  left: 25%;
+  display: none;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.9);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.9);
 }
 
 textarea {
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.9);
-    outline: none;
-    border: none;
-    height: 50vh;
-    width: 100%;
-    padding: 1em;
-    background-color: #a9c4ff;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 30vh;
+  border-radius: .3rem;
+  padding: 10px 16px;
 }
 
 svg {
-    color: #444444;
-    size: 2rem;
-    height: 2rem;
+  color: #444444;
+  size: 2rem;
+  height: 2rem;
 }
 
 #add-btn {
-    position: absolute;
-    right: 6%;
-    bottom: 10%;
+  position: absolute;
+  right: 6%;
+  bottom: 10%;
 }
 
 #close-btn {
-    position: absolute;
-    right: 6%;
-    top: 4%;
+  position: absolute;
+  right: 6%;
+  top: 4%;
 }
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 10px 16px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: .3rem;
+}
+
+.form {
+  width: 50%;
+  background-color: #89a4ff;
+  margin: auto;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  padding: 2em;
+}
+
+.form-center {
+  text-align: center;
+}
+
+.btn-form {
+  width: 90%;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */

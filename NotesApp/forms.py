@@ -1,5 +1,9 @@
 from django import forms
+from .models import Note
 
 
-class NoteForm(forms.Form):
-    notetext = forms.CharField(max_length=100, label='', widget=forms.Textarea)
+class NoteForm(forms.ModelForm):
+
+    class Meta:
+        model = Note
+        fields = ['note_title', 'note_description']

@@ -1,9 +1,27 @@
 {% extends "NotesApp/base.html" %}
+{% load static  %}
 {% block content %}
 <div class="add-notes">
     <button onclick="showEditor()" id="new-note" class="btn btn-success">+ Create Note</button>
 </div>
 <div class="all-notes">
+    {% for note in notes %}
+    <div class="noteTitle ">
+        <a href="{% url 'delete' note.id %}">
+
+            <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+            </svg>
+        </a>
+        <img height="32px" width="32px" src="{% static 'notes/pin.png' %}">
+        <h1>{{note.note_title}}</h1>
+        <div>
+            <a class="btn btn-info" href="{% url 'update' note.id %}">View Details</a>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 <div class="notes-form">
     <form method="POST" action="">
@@ -17,7 +35,10 @@
         </svg>
         <input id="add-btn" class="btn btn-sm btn-success" type="submit" value="Submit">
 
-        {{form.notetext}}<br>
+        Title: {{form.note_title}}<br>
+        Description: <br>
+        {{form.note_description}}
+
     </form>
 </div>
 {% endblock content %}
